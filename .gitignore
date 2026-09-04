@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+.venv/
+venv/
+env/
+
+football_vote.db
+
+.streamlit/secrets.toml
+
+.env
