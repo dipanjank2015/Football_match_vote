@@ -64,9 +64,17 @@ initialize_database()
 # CUSTOM CSS
 # ============================================================
 
+# ============================================================
+# CUSTOM CSS
+# ============================================================
+
 st.markdown(
     """
     <style>
+
+    /* ========================================================
+       MAIN CONTAINER
+    ======================================================== */
 
     .main {
         padding-top: 1rem;
@@ -78,78 +86,344 @@ st.markdown(
         padding-bottom: 3rem;
     }
 
+
+    /* ========================================================
+       HERO SECTION
+    ======================================================== */
+
     .hero {
         text-align: center;
         padding: 25px 15px;
         border-radius: 20px;
-        background: linear-gradient(
-            135deg,
-            #111827,
-            #1f2937
-        );
+        background: rgba(0, 25, 5, 0.85);
+        border: 1px solid #39FF14;
         color: white;
         margin-bottom: 25px;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 36px !important;
+        font-weight: 800 !important;
+        color: #FFFFFF !important;
         margin-bottom: 5px;
     }
 
     .hero p {
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        color: #D1FAE5 !important;
         margin: 5px;
-        opacity: 0.85;
     }
+
+
+    /* ========================================================
+       MATCH INFORMATION CARD
+    ======================================================== */
 
     .info-card {
-        background: #f8fafc;
-        padding: 18px;
-        border-radius: 15px;
-        margin-bottom: 20px;
-        border: 1px solid #e5e7eb;
+        background: rgba(0, 25, 5, 0.88) !important;
+        border: 1px solid #39FF14 !important;
+        border-radius: 16px !important;
+        padding: 18px 22px !important;
+        margin: 10px 0 18px 0 !important;
+        color: #FFFFFF !important;
     }
 
+    .info-card p {
+        color: #FFFFFF !important;
+        font-size: 19px !important;
+        font-weight: 700 !important;
+        line-height: 1.3 !important;
+        margin: 6px 0 !important;
+    }
+
+
+    /* ========================================================
+       PLAYER CARD
+    ======================================================== */
+
     .player-card {
-        background: white;
+        background: rgba(0, 25, 5, 0.85) !important;
         padding: 15px;
         border-radius: 15px;
         margin-bottom: 10px;
-        border: 1px solid #e5e7eb;
+        border: 1px solid rgba(57, 255, 20, 0.5);
+        color: #FFFFFF !important;
     }
 
+    .player-card p {
+        color: #FFFFFF !important;
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+
+
+    /* ========================================================
+       ATTENDANCE STATUS
+    ======================================================== */
+
     .going {
-        color: #15803d;
-        font-weight: 700;
+        color: #39FF14 !important;
+        font-size: 17px !important;
+        font-weight: 800 !important;
     }
 
     .not-going {
-        color: #6b7280;
-        font-weight: 700;
+        color: #FF6B6B !important;
+        font-size: 17px !important;
+        font-weight: 800 !important;
     }
+
+
+    /* ========================================================
+       ADMIN HEADER
+    ======================================================== */
 
     .admin-header {
         text-align: center;
         padding: 20px;
         margin-bottom: 20px;
+        color: #FFFFFF !important;
     }
+
+    .admin-header h1,
+    .admin-header h2,
+    .admin-header h3 {
+        color: #FFFFFF !important;
+        font-weight: 800 !important;
+    }
+
+
+    /* ========================================================
+       SMALL TEXT
+    ======================================================== */
 
     .small-text {
-        font-size: 13px;
-        color: #6b7280;
+        font-size: 15px !important;
+        color: #D1D5DB !important;
+        font-weight: 500 !important;
     }
 
-     [data-testid="stAppViewContainer"] {
-        background-image: url("images/football.jpg");
+
+    /* ========================================================
+       ALL HEADINGS
+    ======================================================== */
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #FFFFFF !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-weight: 800 !important;
+    }
+
+    h1 {
+        font-size: 34px !important;
+    }
+
+    h2 {
+        font-size: 28px !important;
+    }
+
+    h3 {
+        font-size: 24px !important;
+    }
+
+
+    /* ========================================================
+       NORMAL TEXT
+    ======================================================== */
+
+    .stApp p {
+        color: #FFFFFF !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 17px !important;
+        font-weight: 500 !important;
+    }
+
+
+    /* ========================================================
+       LABELS
+    ======================================================== */
+
+    .stApp label {
+        color: #FFFFFF !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+
+
+    /* ========================================================
+       SELECT BOX
+    ======================================================== */
+
+    .stSelectbox label {
+        color: #FFFFFF !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+
+    .stSelectbox div[data-baseweb="select"] {
+        background-color: #FFFFFF !important;
+        border-radius: 8px !important;
+    }
+
+    .stSelectbox div[data-baseweb="select"] * {
+        color: #111827 !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+
+
+    /* ========================================================
+       TEXT INPUT
+    ======================================================== */
+
+    .stTextInput label {
+        color: #FFFFFF !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+
+    .stTextInput input {
+        background-color: #FFFFFF !important;
+        color: #111827 !important;
+        font-size: 17px !important;
+        font-weight: 600 !important;
+        border-radius: 8px !important;
+    }
+
+    .stTextInput input::placeholder {
+        color: #6B7280 !important;
+    }
+
+
+    /* ========================================================
+       BUTTONS
+    ======================================================== */
+
+    .stButton > button {
+        background-color: #16A34A !important;
+        color: #FFFFFF !important;
+        font-size: 17px !important;
+        font-weight: 800 !important;
+        border: 1px solid #39FF14 !important;
+        border-radius: 10px !important;
+        padding: 10px 20px !important;
+    }
+
+    .stButton > button:hover {
+        background-color: #15803D !important;
+        color: #FFFFFF !important;
+        border-color: #FFFFFF !important;
+    }
+
+
+    /* ========================================================
+       METRICS
+    ======================================================== */
+
+    [data-testid="stMetric"] {
+        background: rgba(0, 25, 5, 0.82) !important;
+        border: 1px solid rgba(57, 255, 20, 0.5);
+        border-radius: 12px;
+        padding: 15px;
+    }
+
+    [data-testid="stMetricLabel"] {
+        color: #D1FAE5 !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+    }
+
+    [data-testid="stMetricValue"] {
+        color: #FFFFFF !important;
+        font-size: 30px !important;
+        font-weight: 800 !important;
+    }
+
+
+    /* ========================================================
+       EXPANDER
+    ======================================================== */
+
+    [data-testid="stExpander"] {
+        background: rgba(0, 25, 5, 0.85) !important;
+        border: 1px solid rgba(57, 255, 20, 0.5) !important;
+        border-radius: 12px !important;
+    }
+
+    [data-testid="stExpander"] * {
+        color: #FFFFFF !important;
+    }
+
+
+    /* ========================================================
+       BACKGROUND IMAGE
+    ======================================================== */
+
+    [data-testid="stAppViewContainer"] {
+        background-image:
+            linear-gradient(
+                rgba(0, 25, 5, 0.60),
+                rgba(0, 25, 5, 0.60)
+            ),
+            url("images/football.jpg");
+
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+
+    /* ========================================================
+       MOBILE
+    ======================================================== */
+
+    @media (max-width: 768px) {
+
+        .block-container {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            padding-top: 1rem !important;
+        }
+
+        h1 {
+            font-size: 28px !important;
+        }
+
+        h2 {
+            font-size: 24px !important;
+        }
+
+        h3 {
+            font-size: 21px !important;
+        }
+
+        .stApp p {
+            font-size: 15px !important;
+        }
+
+        .stApp label {
+            font-size: 15px !important;
+        }
+
+        .info-card p {
+            font-size: 17px !important;
+        }
+
+        .stTextInput input {
+            font-size: 16px !important;
+        }
+
+        .stButton > button {
+            font-size: 16px !important;
+        }
     }
 
     </style>
     """,
     unsafe_allow_html=True
 )
-
 
 # ============================================================
 # SESSION STATE
