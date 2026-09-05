@@ -195,7 +195,7 @@ INITIAL_PLAYERS = [
     ("Somnath", "0014"),
     ("papai", "0015"),
     ("Sovon", "0016"),
-    ("rajat", "0017"),
+    ("Rajat", "0017"),
     ("Souvik(Tubai)", "0018"),
     ("Jeet", "0019"),
     ("Lonka", "0020"),

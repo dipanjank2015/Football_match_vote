@@ -1,4 +1,5 @@
 import streamlit as st
+import base64
 
 from database import (
     initialize_database,
@@ -23,6 +24,35 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# ==========================================
+# FOOTBALL GROUND BACKGROUND
+# ==========================================
+
+with open("football_ground.jpg", "rb") as f:
+    image_data = base64.b64encode(f.read()).decode()
+
+st.markdown(
+    f"""
+    <style>
+
+    .stApp {{
+        background-image:
+            linear-gradient(
+                rgba(0, 30, 10, 0.72),
+                rgba(0, 30, 10, 0.72)
+            ),
+            url("data:image/jpeg;base64,{image_data}");
+
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }}
+
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # ============================================================
 # DATABASE INIT
@@ -106,6 +136,13 @@ st.markdown(
     .small-text {
         font-size: 13px;
         color: #6b7280;
+    }
+
+     [data-testid="stAppViewContainer"] {
+        background-image: url("images/football.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     </style>
